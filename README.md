@@ -15,9 +15,9 @@ ESS MARKETPLACE is designed with three separate user roles:
 - **Vendor:** Manages shop profiles, products, product variants, inventory and orders.
 - **Customer:** Browses products, manages wishlist and cart, applies coupons and places orders.
 
-## Screenshots
 
-> Project screenshots will be added in the `docs/screenshots/` directory.
+
+## Project Screenshots
 
 ### Customer Storefront
 ![Customer Storefront](docs/screenshots/01-storefront.png)
@@ -31,12 +31,14 @@ ESS MARKETPLACE is designed with three separate user roles:
 ### Product Details
 ![Product Details](docs/screenshots/04-product-details.png)
 
-### Shopping Cart and Checkout
-![Shopping Cart](docs/screenshots/05-cart-checkout.png)
+### Shopping Cart
+![Shopping Cart](docs/screenshots/05-cart.png)
+
+### Checkout
+![Checkout](docs/screenshots/06-checkout.png)
 
 ### Order Management
-![Order Management](docs/screenshots/06-order-management.png)
-
+![Order Management](docs/screenshots/07-order-management.png)
 ---
 
 ## Technology Stack
