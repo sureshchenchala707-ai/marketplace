@@ -1,59 +1,189 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ESS MARKETPLACE
+### Multi-Vendor E-Commerce Marketplace
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-stack multi-vendor e-commerce platform built using **Laravel 12, PHP 8.2 and MySQL**.
 
-## About Laravel
+ESS MARKETPLACE enables multiple vendors to manage their shops and products while customers can discover products, manage shopping carts, apply promotional offers and place orders through an integrated checkout system.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ESS MARKETPLACE is designed with three separate user roles:
 
-## Learning Laravel
+- **Admin:** Manages users, vendors, products, orders, payments and promotions.
+- **Vendor:** Manages shop profiles, products, product variants, inventory and orders.
+- **Customer:** Browses products, manages wishlist and cart, applies coupons and places orders.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Screenshots
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+> Project screenshots will be added in the `docs/screenshots/` directory.
 
-## Laravel Sponsors
+### Customer Storefront
+![Customer Storefront](docs/screenshots/01-storefront.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Admin Dashboard
+![Admin Dashboard](docs/screenshots/02-admin-dashboard.png)
 
-### Premium Partners
+### Vendor Dashboard
+![Vendor Dashboard](docs/screenshots/03-vendor-dashboard.png)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Product Details
+![Product Details](docs/screenshots/04-product-details.png)
 
-## Contributing
+### Shopping Cart and Checkout
+![Shopping Cart](docs/screenshots/05-cart-checkout.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Order Management
+![Order Management](docs/screenshots/06-order-management.png)
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Technology Stack
 
-## Security Vulnerabilities
+| Category | Technologies |
+|---|---|
+| Backend | PHP 8.2, Laravel 12 |
+| Database | MySQL / MariaDB |
+| Frontend | HTML5, CSS3, Bootstrap 5, Tailwind CSS |
+| JavaScript | JavaScript, jQuery, AJAX |
+| Payment Gateway | Razorpay |
+| Real-time Notifications | Laravel Reverb |
+| Asset Build | Vite, npm |
+| Version Control | Git, GitHub |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Key Features
 
-## License
+### Admin Module
+- Admin authentication and dashboard
+- User management and account status control
+- Vendor application approval and management
+- Product approval and management
+- Order and payment management
+- Coupon and promotional offer management
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Vendor Module
+- Vendor registration and approval workflow
+- Shop profile management
+- Product creation, editing and deletion
+- Product images, variants and specifications
+- Inventory management
+- Vendor order management
+
+### Customer Module
+- Customer registration and authentication
+- Product browsing and product details
+- Shopping cart and wishlist
+- Coupon and promotional offer application
+- Buy One Get One promotional offer
+- Checkout and Razorpay payment integration
+- Order history and order tracking
+- Customer notifications
+
+### Additional Functionality
+- Role-based access control
+- Permission-based authorization
+- Vendor approval middleware
+- Stock reservation and order processing
+- Discount calculation and usage tracking
+- Database and broadcast notifications
+
+## Installation and Setup
+
+### Prerequisites
+- PHP 8.2 or compatible version
+- Composer
+- MySQL or MariaDB
+- Node.js and npm
+- Git
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/sureshchenchala707-ai/marketplace.git
+cd marketplace
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Configure Environment
+
+```bash
+copy .env.example .env
+php artisan key:generate
+```
+
+Update the database configuration in `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=marketplace
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Create the database before running migrations.
+
+### 4. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+Run the project's seeders after configuring any required administrator credentials.
+
+### 5. Install Frontend Dependencies
+
+```bash
+npm install
+npm run build
+```
+
+### 6. Configure Storage
+
+```bash
+php artisan storage:link
+```
+
+### 7. Configure External Services
+
+Configure your own Razorpay API credentials and Laravel Reverb settings in `.env` if you want to test payment processing and real-time broadcasting.
+
+Never commit actual API keys, passwords or secrets.
+
+### 8. Start the Laravel Server
+
+```bash
+php artisan serve
+```
+
+Open:
+
+http://127.0.0.1:8000
+
+## Security
+
+- Environment credentials are excluded from version control.
+- Role and permission checks protect restricted application areas.
+- Vendor approval is required for vendor dashboard access.
+- Payment verification is handled through the payment gateway workflow.
+
+## Project Purpose
+
+Developed as a portfolio project to demonstrate full-stack web application development, Laravel architecture, multi-vendor e-commerce workflows, database relationships, payment integration and responsive frontend development.
+
+## Author
+
+**Suresh Chenchala**
+
+GitHub: https://github.com/sureshchenchala707-ai
+
+---
+
+*This project is developed for learning and portfolio demonstration purposes.*
