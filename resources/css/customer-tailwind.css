@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ess-customer {
+    font-family: 'Inter', sans-serif;
+    color: #171b2c;
+    background: #f6f8fc;
+    min-height: 100vh;
+}
+
+.ess-customer *,
+.ess-customer *::before,
+.ess-customer *::after {
+    box-sizing: border-box;
+}
+
+.ess-customer button,
+.ess-customer input,
+.ess-customer select,
+.ess-customer textarea {
+    font: inherit;
+}
